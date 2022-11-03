@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="./style_form.css"/>
+        <script src="./script_form.js"></script>
+    </head>
+    <body>
+        <div id="interface">
+            <h1>CALCULADORA</h1>
+            <form oninput="calculando();">
+                <fieldset id="calculadora">
+                    <legend>Calculando...</legend>
+                    <p><label for="cnumero1">Primeiro valor:</label><input type="number" name="tnumero1" id="cnumero1" size="20" placeholder="Insira o primeiro numero"/></p>
+                    <p><label for="coperador">Operador:</label><select name="toperador" id="coperador">
+                        <option value="soma" id="csoma">+</option>
+                        <option value="diminuir" id="cdiminuir">-</option>
+                        <option value="multiplicar" id="cmultiplicar">x</option>
+                        <option value="dividir" id="cdividir">/</option>
+                    </select>  
+                    <p><label for="cnumero2">Segundo valor:</label><input type="number" name="tnumero2" id="cnumero2" size="20" placeholder="Insira o segundo numero"/></p>
+                    <p><label for="cresultado">Resultado:</label><input type="text" name="tresultado" id="cresultado" size="20" readonly/></p>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

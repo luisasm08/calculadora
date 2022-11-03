@@ -1,0 +1,46 @@
+@charset "UTF-8";
+body{
+    background-image: url("./fundo.jfif");
+    
+}
+h1{
+    text-align: center;
+}
+div#interface{
+    padding: 5px 5px 5px 5px;
+    margin: 10px auto 10px auto;
+    width: 750px;
+    height: 620px;
+    background-color: white;
+    
+}
+input#cnumero1{
+    position: absolute;
+    top: 150px;
+    left: 300px;
+}
+select#coperador{
+    position: absolute;
+    top: 150px;
+    left: 480px;
+}
+input#cnumero2{
+    position: absolute;
+    top: 150px;
+    left: 520px;
+}
+option#cigual{
+    position: absolute;
+    top: 150px;
+    left: 700px;
+}
+input#cresultado{
+    position: absolute;
+    top: 150px;
+    left: 720px;
+}
+button#cbotao{
+    position: absolute;
+    top: 200px;
+    left: 520px;
+}

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+body{
+    background-image: url("./fundo.jfif");
+    
+}
+h1{
+    text-align: center;
+}
+div#interface{
+    padding: 5px 5px 5px 5px;
+    margin: 10px auto 10px auto;
+    width: 750px;
+    height: 700px;
+    background-color: white;
+    
+}

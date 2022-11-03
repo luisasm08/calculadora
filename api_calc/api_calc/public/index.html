@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="./style.css"/>
+    </head>
+    <body>
+        <div id="interface">
+            <h1>CALCULADORA</h1>
+            <form>
+                    <legend>Calculando...</legend>
+                    <br>
+                    <input type="number" name="tnumero1" id="cnumero1" size="5" placeholder="numero1"/>
+                    <select name="toperador" id="coperador">
+                        <option value="soma" id="csoma">+</option>
+                        <option value="diminuir" id="cdiminuir">-</option>
+                        <option value="multiplicar" id="cmultiplicar">&times;</option>
+                        <option value="dividir" id="cdividir">/</option>
+                    </select> 
+                    <input type="number" name="tnumero2" id="cnumero2" size="5" placeholder="numero2"/>
+                    <option value="cigual" id="cigual">=</option>
+                    <input type="text" name="tresultado" id="cresultado" size="5" placeholder="resultado" readonly/>
+                    <button id="cbotao">calcular </button>
+            </form>
+            <br> <br> <br> <br> <br>
+            <p>Primeiro retangulo: Inserir o primeiro número</p>
+            <p>Dropdown: Selecionar a operação desejada</p>
+            <p>Segundo retangulo: Inserir o segundo número</p>
+            <p>Terceiro retangulo: Visualização do resultado</p>
+        </div>
+        <script>
+            (document.getElementById('cbotao')).addEventListener('click', sendCalc);
+            function sendCalc(e){
+                e.preventDefault()
+                const url = "http://localhost:5500"
+                const corpo = {
+                    operador: document.getElementById('coperador').value,
+                    numero1: document.getElementById('cnumero1').value,
+                    numero2: document.getElementById('cnumero2').value
+                }
+                fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify(corpo),
+                    headers:{
+                        "Content-type":"application/json; charset=UTF-8"
+                    }
+                }).then(response => response.text())
+                .then((response) => {
+                    document.getElementById('cresultado').value = response
+                    return false
+                })
+                .catch(err => console.log(err))
+            }
+        </script>
+    </body>
+</html>

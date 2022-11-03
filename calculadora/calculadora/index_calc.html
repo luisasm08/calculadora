@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="./style.css"/>
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        <div id="interface">
+            <h1>CALCULADORA</h1>
+            <form oninput="calculando();">
+                    <legend>Calculando...</legend>
+                    <br>
+                    <input type="number" name="tnumero1" id="cnumero1" size="5" placeholder="numero1"/>
+                    <select name="toperador" id="coperador">
+                        <option value="soma" id="csoma">+</option>
+                        <option value="diminuir" id="cdiminuir">-</option>
+                        <option value="multiplicar" id="cmultiplicar">&times;</option>
+                        <option value="dividir" id="cdividir">/</option>
+                    </select> 
+                    <input type="number" name="tnumero2" id="cnumero2" size="5" placeholder="numero2"/>
+                    <option value="cbotao" id="cbotao">=</option>
+                    <input type="text" name="tresultado" id="cresultado" size="5" placeholder="resultado" readonly/>
+            </form>
+            <br> <br> <br>
+            <p>Primeiro retangulo: Inserir o primeiro número</p>
+            <p>Dropdown: Selecionar a operação desejada</p>
+            <p>Segundo retangulo: Inserir o segundo número</p>
+            <p>Terceiro retangulo: Visualização do resultado</p>
+        </div>
+    </body>
+</html>
